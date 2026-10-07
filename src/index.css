@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ✅ FIX: Apply custom classes inside @layer base */
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans leading-relaxed;
+  }
+}
+
+/* Your components go here */
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 rounded font-medium text-center transition duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-black hover:bg-gray-300;
+  }
+
+  .btn-destructive {
+    @apply bg-destructive text-white hover:bg-red-700;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-input rounded bg-white text-black;
+  }
+
+  .card {
+    @apply bg-white text-black p-4 rounded border border-gray-200 shadow-sm;
+  }
+
+  .popover {
+    @apply absolute z-10 p-4 bg-popover text-popover-foreground border border-border rounded shadow-md;
+  }
+
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+
+  .ring-outline {
+    @apply outline outline-2 outline-ring outline-offset-2;
+  }
+}
+
+/* Optional utilities */
+@layer utilities {
+  .mt-1 { margin-top: 0.25rem; }
+  .mt-2 { margin-top: 0.5rem; }
+  .mt-4 { margin-top: 1rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .p-4  { padding: 1rem; }
+}

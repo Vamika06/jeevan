@@ -1,0 +1,62 @@
+.navbar {
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  color: #fff;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #d1d5db;
+}
+
+/* Right-side buttons container */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Technician dashboard button */
+.technician-button {
+  background-color: #22c55e; /* green */
+  color: #064e3b;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.technician-button:hover {
+  background-color: #16a34a;
+  color: #ecfdf5;
+}
+
+/* Login button */
+.login-button {
+  background-color: #facc15;
+  color: #1e3a8a;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: #eab308;
+}
